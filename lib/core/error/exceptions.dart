@@ -1,0 +1,1 @@
+class DataException implements Exception {} 
