@@ -33,7 +33,7 @@ class _AddingTaskWidgetState extends State<AddingTaskWidget> {
         : context.read<TodoTasksBloc>().add(AddTaskEvent(text)),
         decoration: InputDecoration(
           isCollapsed: true,
-          focusColor: palette['white'],
+          focusColor: customWhite,
           // filled: true, 
           label: const Text("Name", style: TextStyle(color: Colors.white54)), 
           floatingLabelBehavior: FloatingLabelBehavior.never,

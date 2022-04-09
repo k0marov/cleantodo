@@ -90,7 +90,7 @@ void main() {
       "should emit error if called when state is not Loaded ",
       () async {
         // assert later 
-        expectLater(sut.stream, emitsInOrder([TodoTasksError(message: deletingTaskFailureMessage)])); 
+        expectLater(sut.stream, emitsInOrder([const TodoTasksError(message: deletingTaskFailureMessage)])); 
         // act 
         sut.add(DeleteTaskEvent(tToDelete));
       },
@@ -101,7 +101,7 @@ void main() {
       () async {
         // arrange
         when(() => mockDeleteTask(DeleteTaskParams(taskEntity: tToDelete)))
-          .thenAnswer((_) async => Right(null)); 
+          .thenAnswer((_) async => const Right(null)); 
         sut.emit(TodoTasksLoaded(tasks: tTasks)); 
         // assert later 
         expectLater(sut.stream, emitsInOrder([
@@ -125,7 +125,7 @@ void main() {
         // assert later
         expectLater(sut.stream, emitsInOrder([
           TodoTasksLoadingWithData(currentTasks: tTasks), 
-          TodoTasksError(message: dataFailureMessage), 
+          const TodoTasksError(message: dataFailureMessage), 
         ])); 
         // act
         sut.add(DeleteTaskEvent(tToDelete));

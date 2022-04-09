@@ -21,7 +21,7 @@ void main() {
     listId: "123", 
     id: "321", 
     createdAt: DateTime.now(), 
-    value: TodoTask(
+    value: const TodoTask(
       text: "Test", 
       isCompleted: false, 
     )
@@ -31,11 +31,11 @@ void main() {
     () async {
       // arrange
       when(() => mockRepository.deleteTask(tTask))
-        .thenAnswer((_) async => Right(null)); 
+        .thenAnswer((_) async => const Right(null)); 
       // act
       final result = await sut(DeleteTaskParams(taskEntity: tTask)); 
       // assert
-      expect(result, Right(null)); 
+      expect(result, const Right(null)); 
       verify(() => mockRepository.deleteTask(tTask));
     },
   );

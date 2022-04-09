@@ -20,7 +20,7 @@ class TodoTasksActionButtons extends StatelessWidget {
           child: ElevatedButton(
             child: const Text("Delete"), 
             style: ElevatedButton.styleFrom(
-              primary: palette['red']
+              primary: customRed
             ), 
             onPressed: () {
               final taskList = context.read<TodoTasksBloc>().taskList; 
@@ -39,10 +39,10 @@ class TodoTasksActionButtons extends StatelessWidget {
               height: 50, 
               width: 50, 
               decoration: BoxDecoration(
-                color: palette['red'], 
+                color: customRed, 
                 borderRadius: const BorderRadius.all(Radius.circular(5)), 
               ),
-              child: Icon(Icons.add, color: palette['white'])
+              child: Icon(Icons.add, color: customWhite)
             )
           )
         )

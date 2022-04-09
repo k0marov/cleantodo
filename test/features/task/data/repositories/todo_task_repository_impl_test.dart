@@ -43,7 +43,7 @@ void main() {
         // act
         final result = await sut.deleteTask(tTaskEntity); 
         // assert
-        expect(result, Right(null)); 
+        expect(result, const Right(null)); 
         verify(() => mockTodoTaskDataSource.deleteTask(tTaskEntity)); 
       },
     );

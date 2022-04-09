@@ -32,12 +32,12 @@ class _AddingTaskListWidgetState extends State<AddingTaskListWidget> {
         padding: const EdgeInsets.only(right: 8.0),
         child: TextField(
           autofocus: true,
-          style: GoogleFonts.roboto(color: palette['white'], fontSize: 23), // TextStyle(color: palette['white']), 
+          style: GoogleFonts.roboto(color: customWhite, fontSize: 23), // TextStyle(color: palette['white']), 
           controller: _controller,
           onChanged: (_) => setState((){}),
           decoration: InputDecoration(
             isCollapsed: true,
-            focusColor: palette['white'],
+            focusColor: customWhite, 
             label: const Text("Name", style: TextStyle(color: Colors.white54)), 
             floatingLabelBehavior: FloatingLabelBehavior.never,
             border: textBorder, 
@@ -64,11 +64,11 @@ class _AddingTaskListWidgetState extends State<AddingTaskListWidget> {
                       height: 35, 
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: listColorToColor[listColor], 
+                        color: listColorToColor(listColor), 
                         // border: Border.all(color: palette['white']!, width: 2)
                       ), 
                       child: currentColor == listColor ? 
-                        Icon(Icons.check, color: palette['white'])
+                        Icon(Icons.check, color: customWhite)
                       : null, 
                     )
                   ),
@@ -81,7 +81,7 @@ class _AddingTaskListWidgetState extends State<AddingTaskListWidget> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: palette['white'],
+                    primary: customWhite, 
                   ), 
                   child: Text("Cancel", style: GoogleFonts.roboto(textStyle: const TextStyle(color: Colors.red))), 
                   onPressed: () => context.read<TaskListsBloc>().add(StopAddingListEvent())
@@ -92,7 +92,7 @@ class _AddingTaskListWidgetState extends State<AddingTaskListWidget> {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green,
                     ), 
-                    child: Text("Add", style: GoogleFonts.roboto(textStyle: TextStyle(color: palette['white']))), 
+                    child: Text("Add", style: GoogleFonts.roboto(textStyle: TextStyle(color: customWhite))), 
                     onPressed: _controller.text.isEmpty ? 
                       null 
                     : () => context.read<TaskListsBloc>().add(AddTaskListEvent(
@@ -106,7 +106,7 @@ class _AddingTaskListWidgetState extends State<AddingTaskListWidget> {
           ]
         ),
       ),
-      color: listColorToColor[currentColor], 
+      color: listColorToColor(currentColor), 
     ); 
   }
 }

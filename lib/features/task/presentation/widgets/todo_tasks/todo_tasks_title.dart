@@ -33,7 +33,7 @@ class TodoTasksTitle extends StatelessWidget {
               )
             : CircularProgressIndicator(
               backgroundColor: Colors.grey.shade300,
-              color: palette['red'], 
+              color: customRed, 
               strokeWidth: 3,
               value: nTasks == 0 ? 0 : nCompleted/nTasks, 
             )
@@ -50,7 +50,12 @@ class TodoTasksTitle extends StatelessWidget {
               )
             ), 
             const SizedBox(height: 8), 
-            Text("$nCompleted of $nTasks tasks", style: GoogleFonts.roboto(textStyle: TextStyle(fontSize:15, color: palette['grey']))), 
+            Text(
+              "$nCompleted of $nTasks tasks", 
+              style: GoogleFonts.roboto(
+                textStyle: TextStyle(fontSize:15, color: customGrey)
+              )
+            ), 
           ]),
         ), 
       ]),

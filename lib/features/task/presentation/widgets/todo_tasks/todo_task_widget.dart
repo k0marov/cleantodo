@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:todo_clean_architecture/features/task/domain/usecases/delete_task.dart';
-import 'package:todo_clean_architecture/features/task/presentation/task_lists_bloc/task_lists_bloc.dart';
 
 import '../../../../../core/presentation/colors.dart';
 import '../../../domain/entities/todo_task_entity.dart';
@@ -40,7 +38,7 @@ class TodoTaskWidget extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: GoogleFonts.roboto(textStyle: TextStyle(
                 fontSize: 18, 
-                color: palette['red'], 
+                color: customRed, 
                 decoration: TextDecoration.lineThrough
               ))
             ),
@@ -55,7 +53,7 @@ class TodoTaskWidget extends StatelessWidget {
                 child: Container(
                   margin: const EdgeInsets.all(8), 
                   decoration: BoxDecoration(
-                    border: Border.all(color: palette['grey']!),
+                    border: Border.all(color: customGrey),
                     borderRadius: const BorderRadius.all(Radius.circular(3)), 
                   ),
                 ),

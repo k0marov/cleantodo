@@ -1,7 +1,6 @@
 import 'package:sembast/sembast.dart';
 import 'package:todo_clean_architecture/core/error/exceptions.dart';
 import 'package:todo_clean_architecture/features/task/data/models/todo_task_model.dart';
-import 'package:todo_clean_architecture/features/task/domain/entities/task_list_entity.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../domain/entities/todo_task_entity.dart';

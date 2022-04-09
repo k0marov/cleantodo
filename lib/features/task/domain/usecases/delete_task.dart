@@ -4,7 +4,6 @@ import 'package:todo_clean_architecture/core/error/failures.dart';
 import 'package:todo_clean_architecture/core/usecases/usecase.dart';
 import 'package:todo_clean_architecture/features/task/domain/entities/todo_task_entity.dart';
 import 'package:todo_clean_architecture/features/task/domain/repositories/todo_task_repository.dart';
-import 'package:todo_clean_architecture/features/task/domain/values/todo_task.dart';
 
 class DeleteTask extends UseCase<void, DeleteTaskParams> {
   final TodoTaskRepository repository; 

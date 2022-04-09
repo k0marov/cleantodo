@@ -50,14 +50,14 @@ class _MiniTodoTasksWidgetInternal extends StatelessWidget {
         )); 
       }, 
       child: TaskListLayout(
-        color: listColorToColor[taskList.value.color], 
+        color: listColorToColor(taskList.value.color), 
         titleWidget: Text(taskList.value.title,
           maxLines: 2,
           softWrap: true,
           overflow: TextOverflow.ellipsis,
           style: GoogleFonts.roboto(
             fontSize: 22, 
-            color: palette['white'], 
+            color: customWhite, 
             fontWeight: FontWeight.bold,
           )
         ),

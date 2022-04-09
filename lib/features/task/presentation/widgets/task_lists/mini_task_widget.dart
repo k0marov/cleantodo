@@ -28,7 +28,7 @@ class TaskWidget extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: GoogleFonts.roboto(
                   textStyle: TextStyle(
-                    color: palette['grey'], 
+                    color: customGrey, 
                     decoration: TextDecoration.lineThrough, 
                   )
                 )
@@ -48,7 +48,7 @@ class TaskWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: Container(
                 decoration: BoxDecoration(
-                  border: Border.all(color: palette['grey']!),
+                  border: Border.all(color: customGrey),
                   borderRadius: const BorderRadius.all(Radius.circular(3)), 
                 ),
               ),
@@ -59,7 +59,7 @@ class TaskWidget extends StatelessWidget {
               task.value.text, 
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(color: palette['white']), 
+              style: TextStyle(color: customWhite), 
             ),
           ),
         ],

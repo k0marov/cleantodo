@@ -33,7 +33,7 @@ class TaskListRepositoryImpl implements TaskListRepository {
     try {
       await _taskListDatasource.deleteTaskList(taskList); 
       await _todoTaskDataSource.deleteAllTasks(taskList.id); 
-      return Right(null); 
+      return const Right(null); 
     } on DataException {
       return Left(DataFailure()); 
     }

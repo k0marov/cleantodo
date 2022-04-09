@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/presentation/colors.dart';
 
 class TaskListLayout extends StatelessWidget {
   final Widget titleWidget; 
@@ -34,7 +33,7 @@ class TaskListLayout extends StatelessWidget {
                   )
                 )
               ), 
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Divider(thickness: 2.5, color: Colors.white30),
               ), 
