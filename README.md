@@ -1,5 +1,5 @@
 # CleanTodo
-iOS/Android Mobile app build with Flutter 
+iOS/Android Mobile app built with Flutter 
 <br>
 Mostly to practice TDD + DDD 
 <br>
